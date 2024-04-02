@@ -18,4 +18,4 @@
 
 1. ainda em fase de testagem
 
-2. falta lapidar o codigo, o commit atual foi fruto de uma experimentacao com o springBoot, com padroes de projeto e reflexao commputacional
+2. falta lapidar o codigo, o commit atual foi fruto de uma experimentacao com o springBoot, com padroes de projeto e reflexao computacional
