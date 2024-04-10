@@ -6,6 +6,7 @@ import com.crud.springLearning.DTOs.UserDTO;
 import com.crud.springLearning.services.UserService;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class UserController {
     public ResponseEntity<UserDTO> save(@RequestBody UserDTO userDTO) {
         return userService.saveUser(userDTO);
     }
+
     @Transactional
     @DeleteMapping("/{id}")
     public ResponseEntity<UserDTO>  deleteById(@PathVariable Long id){

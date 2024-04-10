@@ -2,7 +2,13 @@ package com.crud.springLearning.DTOs;
 
 import com.crud.springLearning.models.Role;
 
-public record RoleDTO(Long id, String roleName) {
+import jakarta.validation.constraints.NotNull;
+
+public record RoleDTO(
+    @NotNull(message = "id cannot be null")
+    Long id, 
+    @NotNull(message = "role name cannot be null")
+    String roleName) {
     public RoleDTO(Role role){
         this(role.getId(), role.getRoleName());
     }
