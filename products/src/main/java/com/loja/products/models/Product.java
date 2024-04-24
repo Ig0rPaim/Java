@@ -6,8 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,15 +22,13 @@ public class Product {
     private String name;
     private String descricao;
     private Double price;
-    @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "Id", nullable = true)
-    private Category category;
+    private Long categoryId;
 
     public Product(ProductDTO productDTO){
         this.name = productDTO.name();
         this.descricao = productDTO.descricao();
         this.price = productDTO.price();
-        this.category = productDTO.category();
+        this.categoryId = productDTO.categoryId();
     }
 
 
